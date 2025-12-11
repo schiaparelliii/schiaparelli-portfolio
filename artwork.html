@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artwork</title>
+
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#EFEBCE] p-5">
+
+    <!--nav-->
+     <nav class="flex justify-center items-center gap-10 p-5 mb-10">
+    
+     <a href="index.html" class="group relative hover:opacity-100 transition-opacity">
+          <img src="home.png" alt="Home" 
+               class="w-[200px] md:w-[250px] block group-hover:hidden">
+          <img src="home.gif" alt="Home Animation" 
+               class="w-[200px] md:w-[250px] hidden group-hover:block">
+     </a>
+
+     <a href="artwork.html" class="group relative hover:opacity-100 transition-opacity">
+          <img src="artworks.png" alt="Artwork" 
+               class="w-[200px] md:w-[250px] block group-hover:hidden">
+          <img src="artworks.gif" alt="Artwork Animation" 
+               class="w-[200px] md:w-[250px] hidden group-hover:block">
+     </a>
+
+     <a href="graphicDesign.html" class="group relative hover:opacity-100 transition-opacity">
+          <img src="graphics.png" alt="Graphic Design" 
+               class="w-[200px] md:w-[250px] block group-hover:hidden">
+          <img src="graphics.gif" alt="Graphic Design Animation" 
+               class="w-[200px] md:w-[250px] hidden group-hover:block">
+     </a>
+
+     <a href="contact.html" class="group relative hover:opacity-100 transition-opacity">
+          <img src="contact.png" alt="Contact" 
+               class="w-[200px] md:w-[250px] block group-hover:hidden">
+          <img src="contact.gif" alt="Contact Animation" 
+               class="w-[200px] md:w-[250px] hidden group-hover:block">
+     </a>
+
+     </nav>
+
+    </div>
+    <!--gallery and deets-->
+    <div class="max-w-5xl mx-auto">
+
+     <!--message-->
+     <div class="mb-8">
+        <h2 class="text-[35px] font-bold font-['Brons'] text-[#e05a47] mb-3 tracking-[2px]">
+            Digital Artworks
+        </h2>
+        
+        <p class="max-w-5xl text-gray-800 leading-relaxed font-['Mancunian'] text-[25px] text-justify">
+            Here is a collection of my digital drawings I've accumulated 
+            throughout the years. Some pieces have been lost, but these 
+            are the ones I could recover from my Instagram account. 
+            I've always had a lot of fun creating them, often to the 
+            point of forgetting to eat T^T. Enjooy :3
+        </p>
+        <br>   
+        <p class="max-w-5xl text-gray-800 leading-relaxed font-['Mancunian'] text-[25px] text-justify font-bold">
+        Click on the artworks at the gallery to view them fully :>
+        </p>
+        
+     </div>
+
+     <!--carousel-->
+          <div class="relative w-full max-w-4xl mx-auto mb-20 group">
+            
+            <div id="carousel" class="overflow-hidden rounded-2xl shadow-xl relative h-[300px] md:h-[500px] bg-white">
+
+               <div class="slide absolute inset-0 transition-opacity duration-700 opacity-100">
+                    <img src="digital artworks/tiefling.png" class="w-full h-full object-contain bg-[#242a3b]">
+                </div>
+                
+                <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="digital artworks/sunny.png" class="w-full h-full object-contain bg-[#242a3b]">
+                </div>
+
+               <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="digital artworks/sketch.png" class="w-full h-full object-contain bg-[#242a3b]">
+                </div>
+
+                <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="digital artworks/backpack.png" class="w-full h-full object-contain bg-[#242a3b]">
+                </div>
+
+                <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="digital artworks/eyes.png" class="w-full h-full object-contain bg-[#242a3b]">
+                </div>
+                 <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="digital artworks/hands.png" class="w-full h-full object-contain bg-[#242a3b]">
+                </div>
+
+            </div>
+
+            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 w-12 h-12 opacity-50 rounded-full hover:bg-white hover:scale-110 transition shadow-lg text-[#e05a47] flex justify-center items-center z-10">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </button>
+            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 w-12 h-12 opacity-50 rounded-full hover:bg-white hover:scale-110 transition shadow-lg text-[#e05a47] flex justify-center items-center z-10">
+                <i class="fas fa-chevron-right text-xl"></i>
+            </button>
+        </div>
+
+
+        <div class="flex items-center gap-4 mb-10">
+            <div class="h-px bg-[#e05a47] flex-1 opacity-50"></div>
+            <p class="font-['Mancunian'] text-[#e05a47] text-xl">OR VIEW ALL</p>
+            <div class="h-px bg-[#e05a47] flex-1 opacity-50"></div>
+        </div>
+
+    <!--gallery-->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <img src="digital artworks/sunny.png" alt="Sunny" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/tiefling.png" alt="Tiefling" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="digital artworks/sketch.png" alt="Sketch" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+        
+        <img src="digital artworks/backpack.png" alt="Backpack" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/eyes.png" alt="Eyes" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/flan.png" alt="Flan" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/forest.png" alt="Forest" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/hands.png" alt="Hands" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/ghost.png" alt="Ghost" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/girl.png" alt="Girl" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/paimon.png" alt="Paimon" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/quack.png" alt="Quack" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/raven.png" alt="Raven" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/shibari.png" alt="Shibari" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="digital artworks/skull.png" alt="Skull" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+    </div>
+     </div>
+     </div>
+
+    
+
+    <!--modal lightbox-->    
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 hidden flex justify-center items-center z-50" onclick="closeModal()">
+    
+    <button class="absolute top-5 right-5 text-white text-5xl font-bold cursor-pointer hover:text-red-500">&times;</button>
+    
+    <img id="modalImg" src="" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl">
+
+</div>
+
+    <!-- bgmusic-->
+<audio id="bgMusic" loop>
+  <source src="In Dreamland by Chillpeach.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()" 
+        class="fixed bottom-5 right-5 z-50 bg-[#e05a47] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform font-bold flex items-center gap-2">
+  <span id="musicText">music</span>
+</button>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

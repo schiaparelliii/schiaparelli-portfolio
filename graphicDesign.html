@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artwork</title>
+
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#EFEBCE] p-5">
+
+    <!--nav-->
+     <nav class="flex justify-center items-center gap-10 p-5 mb-10">
+    
+     <a href="index.html" class="group relative hover:opacity-100 transition-opacity">
+          <img src="home.png" alt="Home" 
+               class="w-[200px] md:w-[250px] block group-hover:hidden">
+          <img src="home.gif" alt="Home Animation" 
+               class="w-[200px] md:w-[250px] hidden group-hover:block">
+     </a>
+
+     <a href="artwork.html" class="group relative hover:opacity-100 transition-opacity">
+          <img src="artworks.png" alt="Artwork" 
+               class="w-[200px] md:w-[250px] block group-hover:hidden">
+          <img src="artworks.gif" alt="Artwork Animation" 
+               class="w-[200px] md:w-[250px] hidden group-hover:block">
+     </a>
+
+     <a href="graphicDesign.html" class="group relative hover:opacity-100 transition-opacity">
+          <img src="graphics.png" alt="Graphic Design" 
+               class="w-[200px] md:w-[250px] block group-hover:hidden">
+          <img src="graphics.gif" alt="Graphic Design Animation" 
+               class="w-[200px] md:w-[250px] hidden group-hover:block">
+     </a>
+
+     <a href="contact.html" class="group relative hover:opacity-100 transition-opacity">
+          <img src="contact.png" alt="Contact" 
+               class="w-[200px] md:w-[250px] block group-hover:hidden">
+          <img src="contact.gif" alt="Contact Animation" 
+               class="w-[200px] md:w-[250px] hidden group-hover:block">
+     </a>
+
+     </nav>
+
+    <!--gallery and deets-->
+    <div class="max-w-5xl mx-auto">
+
+     <!--message-->
+        <div class="mb-8">
+        <h2 class="text-[35px] font-bold font-['Brons'] text-[#e05a47] mb-3 tracking-[2px]">
+            Graphic Designs
+        </h2>
+        
+        <p class="max-w-5xl text-gray-800 leading-relaxed font-['Mancunian'] text-[25px] text-justify">
+            Here is a collection of my graphic designs. Most of these are from my time in FEU Tech as a creatives junior officer in the ACM organization.
+            I had a lot of fun creating these designs for various events and activities. The rest are from my Visual Graphics class.
+        </p>
+
+        <br>   
+        <p class="max-w-5xl text-gray-800 leading-relaxed font-['Mancunian'] text-[25px] text-justify font-bold">
+        Click on the pubmats at the gallery to view them fully :> :>
+        </p>
+        </div>
+
+        <div class="relative w-full max-w-4xl mx-auto mb-20 group">
+            
+            <div id="carousel" class="overflow-hidden rounded-2xl shadow-xl relative h-[400px] md:h-[600px] bg-[#242a3b]">
+
+               <div class="slide absolute inset-0 transition-opacity duration-700 opacity-100">
+                    <img src="graphic designs/midterms vis final.png" class="w-full h-full object-contain">
+               </div>
+               
+               <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="graphic designs/movie poster.png" class="w-full h-full object-contain">
+               </div>
+
+               <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="graphic designs/jazz clubpt2.jpg" class="w-full h-full object-contain">
+               </div>
+
+               <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="graphic designs/int women's day.png" class="w-full h-full object-contain">
+               </div>
+
+               <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="graphic designs/anthro.png" class="w-full h-full object-contain">
+               </div>
+
+          </div>
+
+            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 w-12 h-12 opacity-50 rounded-full hover:bg-white hover:scale-110 transition shadow-lg text-[#e05a47] flex justify-center items-center z-10">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </button>
+            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 w-12 h-12 opacity-50 rounded-full hover:bg-white hover:scale-110 transition shadow-lg text-[#e05a47] flex justify-center items-center z-10">
+                <i class="fas fa-chevron-right text-xl"></i>
+            </button>
+        </div>
+
+
+        <div class="flex items-center gap-4 mb-10">
+            <div class="h-px bg-[#e05a47] flex-1 opacity-50"></div>
+            <p class="font-['Mancunian'] text-[#e05a47] text-xl">OR VIEW ALL</p>
+            <div class="h-px bg-[#e05a47] flex-1 opacity-50"></div>
+        </div>
+
+    <!--gallery-->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+
+        <img src="graphic designs/jazz clubpt2.jpg" 
+             alt="Jazz Club" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="graphic designs/midterms vis final.png" 
+             alt="Midterms" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="graphic designs/movie poster.png" 
+             alt="Movie Poster" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+        
+        <img src="graphic designs/anthro.png" 
+             alt="Anthro" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="graphic designs/attendance form.png" 
+             alt="Attendance Form" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="graphic designs/back id.png" 
+             alt="ID Back" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="graphic designs/front id.png" 
+             alt="ID Front" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="graphic designs/DLSU Computer Studies Government.png" 
+             alt="DLSU Gov" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+        <img src="graphic designs/dp blast 3 with placeholder.png" 
+             alt="DP Blast" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/evaluation form.png" 
+             alt="Evaluation Form" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/ftic.png" 
+             alt="FTIC" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/int women's day.png" 
+             alt="Women's Day" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/pfp.png" 
+             alt="Profile Pic" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/registration form.png" 
+             alt="Registration Form" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/kk uprising.png" 
+             alt="kk" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+          
+          <img src="graphic designs/1 day.png" 
+             alt="countdown" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/dday 1.png" 
+             alt="dday" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/back.png" 
+             alt="back" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/front.png" 
+             alt="front" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+          <img src="graphic designs/UST Association of Civil Engineering Students (ACES).png" 
+             alt="ust" onclick="openModal(this.src)" 
+             class="w-full h-[300px] object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+
+    </div>
+
+</div>
+
+    <!--modal lightbox-->    
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 hidden flex justify-center items-center z-50" onclick="closeModal()">
+    
+    <button class="absolute top-5 right-5 text-white text-5xl font-bold cursor-pointer hover:text-red-500">&times;</button>
+    
+    <img id="modalImg" src="" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl">
+
+</div>
+
+    <!-- bgmusic-->
+<audio id="bgMusic" loop>
+  <source src="In Dreamland by Chillpeach.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()" 
+        class="fixed bottom-5 right-5 z-50 bg-[#e05a47] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform font-bold flex items-center gap-2">
+  <span id="musicText">music</span>
+</button>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
